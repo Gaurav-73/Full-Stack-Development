@@ -1,0 +1,418 @@
+                         GIT COMMANDS AND WORKFLOW
+
+
+What is Git?
+
+Git is a Version Control System used to track changes in files and manage software projects.
+
+Git helps developers to:
+- Save different versions of code
+- Track changes
+- Work with multiple developers
+- Upload projects to GitHub
+- Restore previous versions of code
+
+
+------------------------------------------------------------
+
+GIT WORKFLOW DIAGRAM
+
+
+             Create / Edit Files
+                    |
+                    |
+                    ↓
+          +----------------+
+          | Working Area   |
+          +----------------+
+                    |
+                    |
+              git add .
+                    |
+                    ↓
+          +----------------+
+          | Staging Area   |
+          +----------------+
+                    |
+                    |
+        git commit -m "message"
+                    |
+                    ↓
+          +----------------+
+          | Local Repo     |
+          | (.git folder)  |
+          +----------------+
+                    |
+                    |
+             git push origin main
+                    |
+                    ↓
+          +----------------+
+          | GitHub Repo    |
+          | Remote Repo    |
+          +----------------+
+
+
+------------------------------------------------------------
+
+IMPORTANT GIT AREAS
+
+
+1. Working Directory
+
+Working Directory is the place where we create and edit files.
+
+Example:
+
+Full-Stack-Development
+
+    |
+    |---- Assignment No 1
+    |        |
+    |        |---- login.html
+    |        |---- style.css
+    |
+    |---- Assignment No 2
+    |        |
+    |        |---- script.js
+
+
+------------------------------------------------------------
+
+2. Staging Area
+
+Staging Area stores files that are ready to be committed.
+
+Command:
+
+git add .
+
+
+Example:
+
+Working Area
+      |
+      |
+      ↓
+git add .
+      |
+      ↓
+Staging Area
+
+
+------------------------------------------------------------
+
+3. Local Repository
+
+Local Repository stores the committed changes on our computer.
+
+Command:
+
+git commit -m "message"
+
+
+Example:
+
+git commit -m "Added Notes App"
+
+
+------------------------------------------------------------
+
+4. Remote Repository
+
+Remote Repository is the repository stored on GitHub.
+
+Command:
+
+git push origin main
+
+
+It uploads local commits to GitHub.
+
+
+------------------------------------------------------------
+
+BASIC GIT COMMANDS
+
+
+1. git init
+
+Purpose:
+Creates a new Git repository.
+
+Example:
+
+git init
+
+
+------------------------------------------------------------
+
+2. git status
+
+Purpose:
+Shows the current status of files.
+
+Example:
+
+git status
+
+
+Output:
+
+On branch main
+nothing to commit, working tree clean
+
+
+------------------------------------------------------------
+
+3. git add
+
+Purpose:
+Adds files to the staging area.
+
+Add one file:
+
+git add filename
+
+
+Add all files:
+
+git add .
+
+
+------------------------------------------------------------
+
+4. git commit
+
+Purpose:
+Saves changes permanently in Git history.
+
+Example:
+
+git commit -m "Initial commit"
+
+
+------------------------------------------------------------
+
+5. git log
+
+Purpose:
+Shows previous commits.
+
+Example:
+
+git log
+
+
+Output:
+
+commit c4d94fb
+
+Message:
+All Files Added
+
+
+------------------------------------------------------------
+
+6. git remote add origin
+
+Purpose:
+Connects local repository with GitHub repository.
+
+Example:
+
+git remote add origin repository_URL
+
+
+------------------------------------------------------------
+
+7. git remote -v
+
+Purpose:
+Shows connected remote repository.
+
+Example:
+
+git remote -v
+
+
+------------------------------------------------------------
+
+8. git push
+
+Purpose:
+Uploads code to GitHub.
+
+Example:
+
+git push origin main
+
+
+Flow:
+
+Local Repository
+        |
+        |
+        ↓
+      Push
+        |
+        ↓
+GitHub Repository
+
+
+------------------------------------------------------------
+
+9. git pull
+
+Purpose:
+Downloads latest changes from GitHub.
+
+Example:
+
+git pull
+
+
+Flow:
+
+GitHub Repository
+        |
+        |
+        ↓
+      Pull
+        |
+        ↓
+Local Computer
+
+
+------------------------------------------------------------
+
+10. git clone
+
+Purpose:
+Copies an existing GitHub repository.
+
+Example:
+
+git clone repository_URL
+
+
+------------------------------------------------------------
+
+11. git branch
+
+Purpose:
+Creates a new branch.
+
+Example:
+
+git branch feature
+
+
+Diagram:
+
+
+              main
+               |
+               |
+          -------------
+          |
+       feature
+
+
+------------------------------------------------------------
+
+
+Diagram:
+
+
+feature
+   |
+   |
+   ↓
+ main
+
+
+------------------------------------------------------------
+
+COMPLETE GIT PROCESS
+
+
+Create Project
+       |
+       ↓
+git init
+       |
+       ↓
+Create/Edit Files
+       |
+       ↓
+git status
+       |
+       ↓
+git add .
+       |
+       ↓
+git commit -m "message"
+       |
+       ↓
+git remote add origin URL
+       |
+       ↓
+git push origin main
+       |
+       ↓
+Project Uploaded to GitHub
+
+
+------------------------------------------------------------
+
+EXAMPLE WORKFLOW
+
+
+Step 1:
+
+Check files
+
+git status
+
+
+Step 2:
+
+Add files
+
+git add .
+
+
+Step 3:
+
+Commit changes
+
+git commit -m "All Files Added"
+
+
+Step 4:
+
+Upload to GitHub
+
+git push origin main
+
+
+------------------------------------------------------------
+
+ADVANTAGES OF GIT
+
+1. Tracks changes in projects
+2. Keeps history of code
+3. Allows teamwork
+4. Provides backup through GitHub
+5. Helps recover previous versions
+6. Supports different branches
+
+
+------------------------------------------------------------
+
+CONCLUSION
+
+Git is an important tool for developers because it helps manage,
+track, and share code efficiently. GitHub stores Git repositories
+online and allows developers to collaborate on projects.
