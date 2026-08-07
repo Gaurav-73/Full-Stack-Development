@@ -1,0 +1,65 @@
+body 
+{
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container 
+{
+    background: white;
+    width: 400px;
+    padding: 25px;
+}
+
+h2 
+{
+    text-align: center;
+    color: #ff5e62;
+}
+
+input, textarea 
+{
+    width: 95%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+textarea 
+{
+    height: 100px;
+}
+
+button 
+{
+    width: 100%;
+    padding: 10px;
+    background: #ff5e62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background: #e0484c;
+}
+
+.note-card 
+{
+    background: #fff3cd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.delete 
+{
+    background: red;
+    padding: 5px 10px;
+    margin-top: 10px;
+}

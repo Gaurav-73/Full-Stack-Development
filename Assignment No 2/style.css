@@ -1,0 +1,16 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+button {
+    color: blue;
+    background-color: aquamarine;
+    width: 90px;
+    height: 35px;
+}
+
+
+th, td {
+    padding: 8px;
+}
