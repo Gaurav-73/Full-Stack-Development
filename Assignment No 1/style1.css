@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.box-container {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    z-index: 2;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.8s ease;
+}
+
+.red    { background: #ff4757; }
+.green  { background: #2ed573; }
+.yellow { background: #ffa502; }
+.blue   { background: #1e90ff; }
+
+/* Text Hidden in Center */
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Animation on Click */
+.box-container.active .red,
+.box-container.active .yellow {
+    transform: translateX(-120px) rotate(90deg);
+}
+
+.box-container.active .green,
+.box-container.active .blue {
+    transform: translateX(120px) rotate(90deg);
+}
+
+.container.active .hidden-text {
+    opacity: 1;
+}* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.box-container {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.8s ease;
+}
+
+.red {
+    background: #ff4757;
+}
+
+.green {
+    background: #2ed573;
+}
+
+.yellow {
+    background: #ffa502;
+}
+
+.blue {
+    background: #1e90ff;
+}
+
+/* Text Hidden in Center */
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+
+.container:hover .red,
+.container:hover .yellow {
+    transform: translateX(-120px) rotate(90deg);
+}
+
+.container:hover .green,
+.container:hover .blue {
+    transform: translateX(120px) rotate(90deg);
+}
+
+.container:hover .hidden-text {
+    opacity: 1;
+}
