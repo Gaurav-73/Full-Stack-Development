@@ -13,7 +13,6 @@ body {
 }
 
 .container {
-    /* position: relative; */
     cursor: pointer;
 }
 
@@ -30,14 +29,14 @@ body {
     transition: transform 0.8s ease;
 }
 
-/* Text Hidden in Center */
+
 .hidden-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transition: opacity 0.5s ease;
 }
-/* Animation on Click */
+
 .box-container.active .red,
 .box-container.active .yellow {
     transform: translateX(-120px) rotate(90deg);
@@ -84,7 +83,7 @@ body {
     background: #1e90ff;
 }
 
-/* Text Hidden in Center */
+
 .hidden-text {
     position: absolute;
     top: 50%;
