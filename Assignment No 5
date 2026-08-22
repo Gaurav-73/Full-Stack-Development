@@ -1,0 +1,171 @@
+Monogodb_queries
+use college
+
+db.createCollection("students")
+
+db.students.insertOne({
+    name: "Rahul",
+    age: 20,
+    course: "BCA",
+    marks: 85,
+    city: "Nashik"
+})
+
+db.students.insertMany([
+    {
+        name: "Priya",
+        age: 21,
+        course: "BCA",
+        marks: 92,
+        city: "Pune"
+    },
+    {
+        name: "Amit",
+        age: 19,
+        course: "BSc",
+        marks: 78,
+        city: "Mumbai"
+    },
+    {
+        name: "Sneha",
+        age: 22,
+        course: "BCA",
+        marks: 88,
+        city: "Nashik"
+    }
+])
+
+db.students.find()
+
+db.students.findOne({ name: "Rahul" })
+
+db.students.find({ marks: { $gt: 80 } })
+
+db.students.updateOne(
+    { name: "Rahul" },
+    { $set: { marks: 90 } }
+)
+
+db.students.updateMany(
+    { course: "BCA" },
+    { $inc: { marks: 5 } }
+)
+
+db.students.deleteOne({ name: "Amit" })
+
+db.students.deleteMany({ marks: { $lt: 70 } })
+
+db.students.find()
+
+
+
+
+Mongodb_output
+switched to db college
+
+{ ok: 1 }
+
+{
+  acknowledged: true,
+  insertedId: ObjectId("...")
+}
+
+{
+  acknowledged: true,
+  insertedIds: {
+    "0": ObjectId("..."),
+    "1": ObjectId("..."),
+    "2": ObjectId("...")
+  }
+}
+
+[
+  {
+    name: "Rahul",
+    age: 20,
+    course: "BCA",
+    marks: 85,
+    city: "Nashik"
+  },
+  {
+    name: "Priya",
+    age: 21,
+    course: "BCA",
+    marks: 92,
+    city: "Pune"
+  },
+  {
+    name: "Amit",
+    age: 19,
+    course: "BSc",
+    marks: 78,
+    city: "Mumbai"
+  },
+  {
+    name: "Sneha",
+    age: 22,
+    course: "BCA",
+    marks: 88,
+    city: "Nashik"
+  }
+]
+
+{
+  name: "Rahul",
+  age: 20,
+  course: "BCA",
+  marks: 85,
+  city: "Nashik"
+}
+
+[
+  { name: "Rahul", marks: 85 },
+  { name: "Priya", marks: 92 },
+  { name: "Sneha", marks: 88 }
+]
+
+{
+  acknowledged: true,
+  matchedCount: 1,
+  modifiedCount: 1
+}
+
+{
+  acknowledged: true,
+  matchedCount: 3,
+  modifiedCount: 3
+}
+
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+
+[
+  {
+    name: "Rahul",
+    age: 20,
+    course: "BCA",
+    marks: 95,
+    city: "Nashik"
+  },
+  {
+    name: "Priya",
+    age: 21,
+    course: "BCA",
+    marks: 97,
+    city: "Pune"
+  },
+  {
+    name: "Sneha",
+    age: 22,
+    course: "BCA",
+    marks: 93,
+    city: "Nashik"
+  }
+]
