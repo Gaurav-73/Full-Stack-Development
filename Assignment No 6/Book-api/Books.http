@@ -1,0 +1,31 @@
+
+### GET - All books
+GET http://localhost:3000/books
+
+###
+
+### POST - Add a book
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "id": 4,
+  "title": "C++",
+  "price": 350
+}
+
+###
+
+### PUT - Update book 2
+PUT http://localhost:3000/books/2
+Content-Type: application/json
+
+{
+  "title": "Advanced Python",
+  "price": 500
+}
+
+###
+
+### DELETE - Delete book 2
+DELETE http://localhost:3000/books/2

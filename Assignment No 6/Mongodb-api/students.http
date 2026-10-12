@@ -1,0 +1,37 @@
+
+### Add Student
+POST http://localhost:3000/addStudent
+Content-Type: application/json
+
+{
+    "name": "r",
+    "age": 23,
+    "course": "Computer Science"
+}
+
+###
+
+### Get All Students
+GET http://localhost:3000/Students
+
+###
+
+### Get Student By ID
+GET http://localhost:3000/Students/6accb5c1fb3e0ba793758936
+
+###
+
+### Update Student
+PUT http://localhost:3000/Students/PASTE_ID_HERE
+Content-Type: application/json
+
+{
+    "name": "Rahul Patil",
+    "age": 22,
+    "course": "IT"
+}
+
+###
+
+### Delete Student
+DELETE http://localhost:3000/Students/PASTE_ID_HERE
