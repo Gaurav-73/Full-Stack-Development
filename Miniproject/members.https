@@ -1,0 +1,44 @@
+
+### 1. Test API
+GET http://localhost:5000/api/test
+
+
+### 2. Get All Members
+GET http://localhost:5000/api/members
+
+
+### 3. Create a New Member
+POST http://localhost:5000/api/members
+Content-Type: application/json
+
+{
+  "fullName": "Rahul Patil",
+  "age": 25,
+  "gender": "Male",
+  "phone": "9876543210",
+  "email": "rahul.patil@example.com",
+  "membershipPlan": "Monthly",
+  "membershipStartDate": "2026-10-14",
+  "status": "Active"
+}
+
+
+### 4. Get One Member
+# Replace MEMBER_ID with the actual MongoDB _id
+GET http://localhost:5000/api/members/6acf835be011cef0e5475d39
+
+
+### 5. Update a Member
+# Replace MEMBER_ID with the actual MongoDB _id
+PUT http://localhost:5000/api/members/6acf835be011cef0e5475d39
+Content-Type: application/json
+
+{
+  "age": 26,
+  "membershipPlan": "Quarterly"
+}
+
+
+### 6. Delete a Member
+# Replace MEMBER_ID with the actual MongoDB _id
+DELETE http://localhost:5000/api/members/6acf835be011cef0e5475d39
